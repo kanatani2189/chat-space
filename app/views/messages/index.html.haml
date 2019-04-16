@@ -1,0 +1,51 @@
+.flash-box 
+ %p グループを作成しました
+
+.wrapper
+ .chat-side
+  .side-header
+   %p.side-header_user-name
+    shiro
+   %ul.user-menu
+    %li.user-menu_edit-user
+     %a{href: '/groups/new'}
+      %i.fa.fa-edit
+    %li.user-menu_new-group
+     %a{href: '/users/:id/edit'}
+      %i.fa.fa-cog
+  .groups 
+   %a
+    .group
+    %p.group_group-name
+     hi
+    %p.group_latest-message
+     coachella
+
+ .chat-main
+  .main-header
+   .current-group
+    %h2.current-group_name
+     hi
+    %ul.member-list
+     %li.member-list_member
+      test
+   %a 
+    %div.main-header_edit-btn
+     %a
+      Edit
+
+  .messages
+   #data-message_id.message
+    %p.upper-info_user
+     shiro
+    %p.message_text
+     coachella
+  .form
+   %form#new_message.new-message
+    .input-box
+     %input#message_content.input-box_text{placeholder: "type a message", type: "text", name: "message[content]"}
+     %label.image-label
+      %i.fa.fa-image
+      %input#message_image.image-label_input{type: "file", name: "message[image]"}
+    %input.new-message_submit-btn{type: "submit", name: "commit", value: "Send"} 
+     
