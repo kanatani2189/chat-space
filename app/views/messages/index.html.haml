@@ -8,10 +8,10 @@
     shiro
    %ul.user-menu
     %li.user-menu_edit-user
-     %a{:href => '/groups/new'}
+     %a{href: '/groups/new'}
       %i.fa.fa-edit
     %li.user-menu_new-group
-     %a{:href => '/users/:id/edit'}
+     %a{href: '/users/:id/edit'}
       %i.fa.fa-cog
   .groups 
    %a
@@ -43,9 +43,9 @@
   .form
    %form#new_message.new-message
     .input-box
-     %input#message_content.input-box_text{:placeholder => "type a message", :type => "text", :name => "message[content]"}
+     %input#message_content.input-box_text{placeholder: "type a message", type: "text", name: "message[content]"}
      %label.image-label
       %i.fa.fa-image
-      %input#message_image.image-label_input{:type => "file", :name => "message[image]"}
-    %input.new-message_submit-btn{:type => "submit", :name => "commit", :value => "Send"} 
+      %input#message_image.image-label_input{type: "file", name: "message[image]"}
+    %input.new-message_submit-btn{type: "submit", name: "commit", value: "Send"} 
      
