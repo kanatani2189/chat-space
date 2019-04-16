@@ -30,7 +30,6 @@
   padding: 0 20px;
   font-weight: bold;
 
-
     ul{
       list-style: none;
     }
@@ -75,10 +74,11 @@
     font-size: 20px;
     color: #333;
     margin-top: 35px;
-  }
-  .current-group_name{
-    font-size: 100%;
-    font-weight: normal;
+  
+    &_name{
+      font-size: 100%;
+      font-weight: normal;
+    }
   }
   .member-list{
     display: flex;
@@ -115,12 +115,12 @@
   .upper-info{
     display: flex;
     margin-bottom: 10px;
-  }
-
-  .upper-info_user {
-  font-size: 16px;
-  font-weight: bold;
-  color: #434a54;
+  
+    &_user {
+    font-size: 16px;
+    font-weight: bold;
+    color: #434a54;
+    }
   }
 
   .form{
@@ -128,22 +128,20 @@
     padding: 20px 40px;
     background-color: #ddd;
 
-
     .new-message{
       display: flex;
-
 
       .input-box{
         position: relative;
         width: 100%;
-      }
-
-      .input-box_text{
-        height: 50px;
-        width: 100%;
-        padding: 0 40px 0 10px;
-        color: #434a54;
-        border-style: none;
+      
+        &_text{
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          color: #434a54;
+          border-style: none;
+        }
       }
 
       .image-label{
@@ -151,12 +149,11 @@
         top: 10px;
         right: 10px;
         cursor: pointer;
+      
+        &_input{
+          display: none;
+        }
       }
-
-      .image-label_input{
-        display: none;
-      }
-
       .new-message_submit-btn{
         width: 100px;
         height: 50px;
@@ -165,10 +162,9 @@
         background-color: $blue;
         color: #fff;
         cursor: pointer;
-
-
       }
     }  
   }  
 }
      
+
