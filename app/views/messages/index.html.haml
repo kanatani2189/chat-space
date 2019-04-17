@@ -1,26 +1,6 @@
-.flash-box 
- %p グループを作成しました
-
 .wrapper
  .chat-side
-  .side-header
-   %p.side-header_user-name
-    shiro
-   %ul.user-menu
-    %li.user-menu_edit-user
-     %a{href: '/groups/new'}
-      %i.fa.fa-edit
-    %li.user-menu_new-group
-     %a{href: '/users/:id/edit'}
-      %i.fa.fa-cog
-  .groups 
-   %a
-    .group
-    %p.group_group-name
-     hi
-    %p.group_latest-message
-     coachella
-
+  = render partial: "shared/side_bar"
  .chat-main
   .main-header
    .current-group
@@ -31,7 +11,7 @@
       test
    %a 
     %div.main-header_edit-btn
-     %a
+     = link_to edit_group_path(current_user) do
       Edit
 
   .messages
