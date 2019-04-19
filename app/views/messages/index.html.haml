@@ -5,27 +5,28 @@
   .main-header
    .current-group
     %h2.current-group_name
-     hi
+     = @group.name
     %ul.member-list
+     Member :
      %li.member-list_member
-      test
+      - @groups. each do |group|
+       = group.name
    %a 
     %div.main-header_edit-btn
      = link_to edit_group_path(current_user) do
       Edit
 
   .messages
-   #data-message_id.message
-    %p.upper-info_user
-     shiro
-    %p.message_text
-     coachella
+   = render @messages
+
   .form
-   %form#new_message.new-message
+   .new-message
     .input-box
-     %input#message_content.input-box_text{placeholder: "type a message", type: "text", name: "message[content]"}
-     %label.image-label
-      %i.fa.fa-image
-      %input#message_image.image-label_input{type: "file", name: "message[image]"}
-    %input.new-message_submit-btn{type: "submit", name: "commit", value: "Send"} 
+     = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'input-box_text', placeholder: 'type a message'
+      .form_mask
+       = f.label :image, class: 'image-label' do
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'image-label_input'
+      = f.submit 'Send', class: 'new-message_submit-btn'
      
