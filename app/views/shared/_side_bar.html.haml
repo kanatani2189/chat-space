@@ -1,0 +1,22 @@
+.chat-side
+ .side-header
+  %p.side-header_user-name
+   shiro
+  %ul.user-menu
+   %li.user-menu_edit-user
+    = link_to new_group_path do
+     %i.fa.fa-edit
+   %li.user-menu_new-group
+    = link_to edit_user_path(current_user) do
+     %i.fa.fa-cog
+ .groups 
+  %a
+   .group
+    - current_user.groups.each do |group|
+     = link_to group_messages_path(group) do   
+      %p.group_group-name
+       = group.name
+      %p.group_latest-message
+       = group.show_last_message
+
+

@@ -1,4 +1,10 @@
 @import "./reset";
 @import 'font-awesome';
 @import '_variable.scss';
-@import '_style.scss';
+@import 'style.scss';
+@import '_user.scss';
+@import 'config/colors';
+@import 'modules/flash';
+@import "modules/group";
+@import 'modules/side_bar';
+@import 'modules/chat';
