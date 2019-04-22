@@ -91,7 +91,10 @@
     border: solid 1px $blue;
     color: $blue;
   }
-
+  
+  a{
+    text-decoration: none;
+  }
   .messages{
     padding: 46px 40px;
     background-color: #fafafa;
