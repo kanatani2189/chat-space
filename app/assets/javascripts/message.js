@@ -1,37 +1,25 @@
 $(document).on('turbolinks:load', function(){
   function buildHTML(message){
-
-      var html =       `<div class = "message">
-                          <div class = "upper-info">
-                            <div class = "upper-info_user">
-                            ${message.user_name}
-                            </div>
-                            <div class = "upper-info_date">
-                            ${message.date}
-                            </div>
-                          </div>
-                          <div class = "lower-message">`
-    
-    if (message.content !== null){
-     
-      var content_html =  `<p class = "message_text">
-                            ${message.content}
-                           </p>`
-      html = html + content_html
-    }
-    
+    var content = message.content? `${message.content}` :"";
     var img = message.image ? `<img src= ${ message.image }>` : "";
-    if (message.image !== null){
-      
-      var image_html =    `<div class = "lower-message__image">
-                            ${img}
+    var html =       `<div class = "message">
+                        <div class = "upper-info">
+                          <div class = "upper-info_user">
+                          ${message.user_name}
                           </div>
+                          <div class = "upper-info_date">
+                          ${message.date}
                           </div>
-                        </div>`
-      html = html + image_html
-    }                    
-    
-  
+                        </div>
+                        <div class = "lower-message">     
+                        <p class = "message_text">
+                          ${content}
+                        </p>
+                        <div class = "lower-message__image">
+                          ${img}
+                        </div>
+                        </div>
+                      </div>`
   return html; 
   }
   $('#new_message').on('submit', function(e){
