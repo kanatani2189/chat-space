@@ -10,7 +10,6 @@
   h1 {
     letter-spacing: 2px;
     font-size: 24px;
-    font-weight: bold;
     text-align: center;
   }
 
@@ -57,6 +56,11 @@
     }
 
     .chat-group-form__field--right {
+      float: right;
+      width: 70%;
+    }
+
+    .chat-group-form__field--right--member{
       float: right;
       width: 70%;
     }

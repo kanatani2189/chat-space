@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user)
     @groups = @group.users
-  end
+  end 
 
   def create
     @message = @group.messages.new(message_params)

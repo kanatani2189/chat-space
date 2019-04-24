@@ -1,0 +1,44 @@
+<%# <form class="edit_group" id="edit_group_495" action="/groups/495" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="XHNkWc8oxHgKQVF1cHxDsS26A23IfEvzlJ0Pq8Qk2fmwY9yRXI2wRISYjNqTIliKyFDdPrC8ZGuSUGwwyNlnMA=="><div class="chat-group-form__field clearfix">
+<div class="chat-group-form__field--left">
+<label class="chat-group-form__label" for="group_name">グループ名
+</label></div>
+<div class="chat-group-form__field--right">
+<input class="chat__group_name chat-group-form__input" placeholder="グループ名を入力してください" type="text" value="hi" name="group[name]" id="group_name">
+</div>
+</div> %>
+<%# <div class="chat-group-form__field clearfix"> %>
+<div class="chat-group-form__field--left">
+<label class="chat-group-form__label" for="user-search-field">チャットメンバーを追加
+</label></div>
+<div class="chat-group-form__field--right">
+<div class="chat-group-form__search clearfix">
+<input type="text" name="search" id="user-search-field" value="" placeholder="追加したいユーザー名を入力してください" class="chat-group-form__input">
+</div>
+<div id="user-search-result"></div>
+</div>
+</div>
+<div class="chat-group-form__field clearfix">
+<div class="chat-group-form__field--left">
+<label class="chat-group-form__label" for="members">チャットメンバー</label>
+</div>
+<div class="chat-group-form__field--right">
+<div class="chat-group-users js-add-user">
+<div class="chat-group-user clearfix js-chat-member" id="292">
+<input value="292" name="group[user_ids][]" type="hidden" id="group_user_ids">
+<p class="chat-group-user__name">shiro</p>
+</div>
+<div class="chat-group-user clearfix js-chat-member" id="18">
+<input value="18" name="group[user_ids][]" type="hidden" id="group_user_ids">
+<p class="chat-group-user__name">testtest</p>
+<a class="chat-group-user__btn chat-group-user__btn--remove js-remove-btn">削除</a>
+</div>
+</div>
+</div>
+</div>
+<div class="chat-group-form__field clearfix">
+<div class="chat-group-form__field--left"></div>
+<div class="chat-group-form__field--right">
+<input type="submit" name="commit" value="更新する" class="chat-group-form__action-btn" data-disable-with="更新する">
+</div>
+</div>
+</form>
