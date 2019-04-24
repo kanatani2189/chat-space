@@ -58,13 +58,11 @@
     .chat-group-form__field--right {
       float: right;
       width: 70%;
+      &.--member{
+        float: right;
+        width: 70%;
+      }
     }
-
-    .chat-group-form__field--right--member{
-      float: right;
-      width: 70%;
-    }
-
     .chat-group-form__label {
       display: block;
       line-height: 50px;

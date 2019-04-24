@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user)
     @groups = @group.users
-  end 
+  end
 
   def create
     @message = @group.messages.new(message_params)
@@ -21,9 +21,6 @@ class MessagesController < ApplicationController
       flash.now[:alert] = 'メッセージを入力してください。'
       render :index
     end
-
-
-
   end
 
   private
