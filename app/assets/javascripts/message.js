@@ -45,6 +45,7 @@ $(document).on('turbolinks:load', function(){
       $('.messages').append(html)
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       $('.input-box_text').val('')
+      $('.image-label_input').val('')
     })
     .fail(function(){
       alert('error');
